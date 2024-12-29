@@ -1,4 +1,4 @@
-// This MakeCode extension for micro:bit allows identification of RFID cards using an expansion module with a PN532.
+// This MakeCode extension for micro:bit allows identification of RFID cards using an expansion module with a PN532 connected via I2C.
 // It should work with:
 // - DFRobot Gravity module (https://wiki.dfrobot.com/Gravity:%20I2C%20&%20UART%20NFC%20Module%20SKU:%20DFR0231-H#target_5)
 // - Elecfreaks Octopus module (https://wiki.elecfreaks.com/en/microbit/sensor/octopus-sensors/sensor/octopus_ef04105)
@@ -208,20 +208,6 @@ namespace NFC1 {
         }
 
         return true;
-    }
-
-
-    // Testing code.
-    serial.writeLine('Hello.');
-    while (true) {
-        serial.writeLine('\nChecking for card...');
-        let foundId = getCardId();
-        if (foundId != '') {
-            serial.writeLine('CARD FOUND. UID is: ' + foundId)
-        } else {
-            serial.writeLine('NO CARD.');
-        }
-        basic.pause(1000);
     }
 
 }

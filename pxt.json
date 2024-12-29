@@ -1,5 +1,5 @@
 {
-    "name": "i2c NFC extension prototyping",
+    "name": "i2c NFC extension",
     "description": "",
     "dependencies": {
         "core": "*",
